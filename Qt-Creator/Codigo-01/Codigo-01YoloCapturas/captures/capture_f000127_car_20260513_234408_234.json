@@ -1,0 +1,20 @@
+{
+    "bbox": [
+        823,
+        324,
+        1026,
+        489
+    ],
+    "class_id": 2,
+    "click_point": [
+        966,
+        402
+    ],
+    "confidence": 0.5861283540725708,
+    "frame_id": 127,
+    "image_height": 720,
+    "image_width": 1280,
+    "label": "car",
+    "saved_image_path": "C:/Carlens/CodigoPrueba/captures/capture_f000127_car_20260513_234408_234.jpg",
+    "timestamp": 1778715848.2165294
+}

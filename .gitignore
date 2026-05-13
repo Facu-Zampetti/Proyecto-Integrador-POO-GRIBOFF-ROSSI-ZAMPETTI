@@ -1,0 +1,34 @@
+# C++ y Objetos - Qt Creator
+# --------------------------
+
+# Ignorar cualquier carpeta llamada build o que empiece con build en cualquier nivel
+**/build/
+**/build-*/
+
+# Ignorar caché de Clangd y configuraciones de Qt Creator
+**/.qtc_clangd/
+**/.cache/
+*.pro.user*
+
+# Archivos de configuración de usuario de Qt Creator (específicos de tu PC)
+*.pro.user
+*.pro.user.*
+
+# Archivos temporales de compilación
+*.o
+*.obj
+*.moc
+*.qrc.cpp
+ui_*.h
+
+# Ejecutables (Windows)
+*.exe
+*.dll
+
+# Debug/Release folders
+debug/
+release/
+
+# Archivos de VS Code (por si usas ese editor a veces)
+.vscode/
+.vs/
