@@ -20,6 +20,8 @@
 *.moc
 *.qrc.cpp
 ui_*.h
+*.jpg
+*.json
 
 # Ejecutables (Windows)
 *.exe
