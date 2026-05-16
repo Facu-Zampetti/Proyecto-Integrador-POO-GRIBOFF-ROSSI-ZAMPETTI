@@ -7,9 +7,9 @@
 
 ### Repositorios y Roles
  1) Roles Principales:
-    - Ignacio Griboff: Cliente Desktop - Github
-    - Gonzalo Rossi: Infraestructura - Frontend
-    - Facundo Zampetti: Backend
+    - Ignacio Griboff: MySQL - phpmyadmin - SQLite - adminDB - Frontend
+    - Gonzalo Rossi: FastAPI - Datamanager
+    - Facundo Zampetti: VPS - Dockercompose - nginx - frontend
  2) Estructura Github:
 ### Plan Tecnico Principal
  1) Stack:
