@@ -2,15 +2,15 @@
 
 ### Definición del Proyecto
  1) Nombre del proyecto: Carlens
- 2) Descripcion General: El proyecto es una plataforma web que procesa fotografías de vehículos, ya sea capturadas en el momento o subidas por el usuario, utilizando modelos de visión por computadora. A partir de la imagen,   el sistema identifica automáticamente la marca, el modelo y las características físicas del automóvil.
+ 2) Descripcion General: Carlens consiste en un sistema inteligente de analisis de videos con enfoque a la detección y procesamiento de vehiculos a partir de la incorporación de modelos de inteligencia artificial.
  3) Servicios Utilizados: Github Copilot, VPS Contabo.
 
 ### Repositorios y Roles
  1) Roles Principales:
-    - Ignacio Griboff: MySQL - phpmyadmin - SQLite - adminDB - Frontend
-    - Gonzalo Rossi: FastAPI - Datamanager
-    - Facundo Zampetti: VPS - Dockercompose - nginx - frontend
+    - Ignacio Griboff: MySQL - phpmyadmin - SQLite - adminDB - Dockercompose - nginx - VPS
+    - Gonzalo Rossi: FastAPI - Datamanager - YoloV11 - OpenIA - RTSP
+    - Facundo Zampetti: Frontend - QT - Documentación - Informes
  2) Estructura Github:
 ### Plan Tecnico Principal
  1) Stack:
- 2) Autenticación
+ 2) Autenticación:
