@@ -130,7 +130,7 @@ Las imágenes no se guardan como binario en la base, sino como archivos en el VP
 ## 9. Roles
 
 - **Ignacio Griboff**: MySQL - phpmyadmin - SQLite - adminDB - Dockercompose - nginx - VPS
-- **Gonzalo Rossi**: FastAPI - Datamanager - YoloV11 - OpenIA - RTSP
+- **Gonzalo Rossi**: FastAPI - Datamanager - YoloV11 - Gemini - RTSP
 - **Facundo Zampetti**: Frontend - QT - Documentación - Informes
 
 ---
