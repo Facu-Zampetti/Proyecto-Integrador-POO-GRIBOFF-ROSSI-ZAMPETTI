@@ -1,0 +1,16 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+  <qresource prefix="/">
+    <file>styles/dark_theme.qss</file>
+    <file>icons/car.svg</file>
+    <file>icons/video-camera.svg</file>
+    <file>icons/film.svg</file>
+    <file>icons/folder.svg</file>
+    <file>icons/satellite.svg</file>
+    <file>icons/list.svg</file>
+    <file>icons/search.svg</file>
+    <file>icons/target.svg</file>
+    <file>icons/inbox.svg</file>
+    <file>icons/settings.svg</file>
+  </qresource>
+</RCC>

@@ -1,0 +1,68 @@
+###############################################
+# Carlens - MediaMTX config
+#
+# Flujo:  Android (Larix Broadcaster, push RTMP)
+#           --> MediaMTX @Contabo (173.212.234.190)
+#             --> Carlens app (pull RTSP, YOLO local)
+#
+# Path RTMP/RTSP = live/carlens  (app=live, stream=carlens) -> formato host/app/stream que exige Larix.
+#
+# Publicar (telefono/Larix) - SIN credenciales (publish anonimo, target type = RTMP plano):
+#   URL:    rtmp://173.212.234.190:1935/live
+#   Stream: carlens
+# Consumir (Carlens) - CON credenciales de lectura:
+#   rtsp://carlensapp:CarlensRead2026mQ3@173.212.234.190:8554/live/carlens
+#
+# Nota: la auth de publicacion via Larix "RTMP authorization" (login/pass) usa challenge-response
+# que MediaMTX no soporta; MediaMTX solo acepta credenciales por query string. Para el test dejamos
+# el PUBLISH anonimo y el READ protegido. Para re-asegurar el publish: agregar credenciales por query
+# string (?user=&pass=) en el nombre del stream.
+###############################################
+
+logLevel: info
+logDestinations: [stdout]
+
+# ---- Servidores habilitados ----
+# RTMP: ingest desde el telefono
+rtmp: yes
+rtmpAddress: :1935
+
+# RTSP: salida hacia la app Carlens (forzado a TCP, mas robusto sobre red movil)
+rtsp: yes
+rtspAddress: :8554
+rtspTransports: [tcp]
+
+# ---- Servidores deshabilitados (no se usan hoy) ----
+hls: no
+webrtc: no
+srt: no
+moq: no
+
+# ---- API de control (solo local, para health checks) ----
+api: yes
+apiAddress: 127.0.0.1:9997
+
+# ---- Autenticacion interna ----
+authMethod: internal
+authInternalUsers:
+  # Publish ANONIMO al path 'live/carlens' (el telefono no manda credenciales).
+  # El usuario 'any' sin pass matchea cualquier conexion sin autenticar.
+  - user: any
+    ips: []
+    permissions:
+      - action: publish
+        path: live/carlens
+
+  # Lectura PROTEGIDA: solo carlensapp con su clave puede consumir el stream.
+  - user: carlensapp
+    pass: CarlensRead2026mQ3
+    ips: []
+    permissions:
+      - action: read
+        path: live/carlens
+
+# ---- Paths ----
+paths:
+  live/carlens:
+    # on-demand: el stream existe cuando el telefono publica
+    source: publisher

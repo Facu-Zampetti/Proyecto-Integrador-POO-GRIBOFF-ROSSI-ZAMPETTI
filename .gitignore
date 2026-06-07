@@ -34,3 +34,7 @@ release/
 # Archivos de VS Code (por si usas ese editor a veces)
 .vscode/
 .vs/
+
+.claude
+*.claude
+CLAUDE.md
