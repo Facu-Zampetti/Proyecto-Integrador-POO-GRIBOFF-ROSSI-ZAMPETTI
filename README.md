@@ -16,7 +16,6 @@ Este proyecto implementa un sistema integral de vigilancia vehicular que permite
 - **Subida de imágenes:** Maneja la transferencia de archivos de imagen y metadatos de manera autenticada hacia el VPS a través de API o SFTP.
 
 ### Backend
-- **Framework:** FastAPI (Python)
 - **Lenguaje:** Python 3.10+
 - **Responsabilidad:** Exposición de API REST, lógica de negocio, manejo de usuarios, sesiones, y persistencia de todos los datos.
 - **Autenticación:** Validación de credenciales (Basic Auth / JWT).
@@ -28,7 +27,7 @@ Este proyecto implementa un sistema integral de vigilancia vehicular que permite
 - **Servicios:**
     - `db` - **MySQL 8**: Base de datos principal del sistema.
     - `phpmyadmin` - **phpMyAdmin**: Administración web de la base de datos.
-    - `backend` - FastAPI (Dockerizado)
+    - `backend` - Python
     - `nginx` - Reverse proxy, sirve API y paneles, expone phpMyAdmin.
     - `certbot` - Para certificados SSL/TLS (opcional/automatizado).
 - **Volúmenes y persistencia:**
@@ -130,7 +129,7 @@ Las imágenes no se guardan como binario en la base, sino como archivos en el VP
 ## 9. Roles
 
 - **Ignacio Griboff**: MySQL - phpmyadmin - SQLite - adminDB - Dockercompose - nginx - VPS
-- **Gonzalo Rossi**: FastAPI - Datamanager - YoloV11 - Gemini - RTSP
+- **Gonzalo Rossi**: Python(Backend) - Datamanager - YoloV11 - Gemini - RTSP
 - **Facundo Zampetti**: Frontend - QT - Documentación - Informes
 
 ---
